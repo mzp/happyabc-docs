@@ -1,0 +1,18 @@
+* エントリポイント
+swfファイルがロードされると、main関数が呼ばれます。引数は、ステージであるSpriteクラスのインスタンスです。
+
+>|scheme|
+(define (main stage)
+  (let [(t (new flash.text.TextField))]
+    (. t (appendText "Hello,world!!"))
+    (. stage (addChild t))))
+||<
+
+<code>habc</code>に複数のファイルが渡された場合は、最後のファイルのmain関数が呼ばれます。
+>|sh|
+# baz.scmで定義されたmain関数が呼ばれる
+$ habc foo.scm bar.scm baz.scm
+||<
+
+トップレベルの式も評価されますが、ステージを参照できないため描画処理を行なえません。Tamarinで実行する場合以外は、main関数に書くことをお勧めします。
+

@@ -1,0 +1,34 @@
+* 概要
+クラスの宣言と使用方法です。
+Flashのライブラリを利用するために用いることを想定しています。
+
+* (class name (super) (attr1 attr2 ..) method1 method2 ..)[文]
+<code>name</code>というクラスを宣言します。
+<code>super</code>は親クラスです。複数の親クラスを指定したり、親クラスを省略するとObjectを指定したのと同じ意味になります。
+<code>attr_n</code>でクラスの持つ属性を指定します。属性は、slot-ref/slot-set!で参照・設定できます。
+<code>method_n</code>は以下のいずれかの形式をしています。
+:(method f (self arg1 arg2 ..) body):インスタンスメソッドを宣言します。第1引数はインスタンスを指す変数です。
+:(static-method f (arg1 arg2 ..) body):クラスメソッドを宣言します。
+>|scheme|
+(class Point ()
+  (x y)
+  (method distance (self)
+     (+ (* x x) (* y y))))
+||<
+
+* (new name)[式]
+<code>name</code>クラスのインスタンスを生成します。
+
+* (slot-ref obj name)[式]
+<code>obj</code>の指すオブジェクトの<code>name</code>属性を参照します。
+
+* (slo-set! obj name val)[式]
+<code>obj</code>の指すオブジェクトの<code>name</code>属性に、<code>val</code>を評価した結果を設定します。
+
+* (. obj (f arg1 arg2 ..))[式]
+<code>obj</code>の指すオブジェクトのメソッド<code>f</code>を呼びます。
+
+>|scheme|
+(. textfield (addText "foo bar"))
+(. Math (cos 30))
+||<

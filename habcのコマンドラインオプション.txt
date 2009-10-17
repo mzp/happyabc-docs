@@ -1,0 +1,90 @@
+* 書式
+>||
+habc [OPTIONS] file1.scm [file2.scm ..]
+||<
+
+* コンパイルに影響を与えるオプション
+** -I<dir ..>
+モジュールを検索するディレクトリを指定します。複数のパスを指定する際は、<code>:</code>で区切ります。(Windowsの場合は、<code>;</code>)
+詳しくは「[[モジュールシステム]]」の節を参照してください。
+
+** -c
+コンパイルのみを行ないます。生成されるのは中間形式である<code>.ho</code>ファイルです。
+
+** -o<file>
+生成されるファイル名を指定します。拡張子は自動で補完されるので、<code>foo</code>を指定すると、<code>foo.swf</code>が生成されます。
+
+** --no_std
+標準ライブラリをリンクしないように指定します。
+
+* 生成されるswfの設定を指定するオプション
+** -W<width>, --width=<width>
+生成するswfの幅をピクセルで指定します。
+
+** -H<height>, --height=<height>
+生成するswfの高さをピクセルで指定します。
+
+** --bg=<color>
+生成するswfの背景色を指定します。
+色の指定方法は、
+- 16進指定 #FFFFFF
+- 10進指定 rgb(100, 100, 100)
+- 名前指定(red,green,black,...)
+の3種類があります。
+
+* 情報を表示するオプション
+habcコマンドの情報を表示します。
+
+** --version
+HappyABCのバージョン番号を示します。
+
+** -h, --help
+コマンドライン・オプションの一覧を表示します。
+
+** --conf
+HappyABCをビルドする際に指定したオプションを表示します。
+>|sh|
+$ habc --conf
+version:          "local-HEAD"
+bin_dir:          "/Users/mzp/c/external/scheme-abc"
+share_dir:        "/Users/mzp/c/external/scheme-abc/share/habc"
+lib_dir:          "/Users/mzp/c/external/scheme-abc/lib/habc"
+default_includes: ["/Users/mzp/c/external/scheme-abc/lib/habc"; "."]
+default_template: "/Users/mzp/c/external/scheme-abc/share/habc/template.xml"
+path_sep:         ":"
+exe:              ""
+||<
+
+* その他
+主にデバッグ目的のコマンドです。
+
+** -v, --verbose
+実行するコマンドを表示します。
+
+** -n, --just-print
+実行しようとしたコマンドを表示します。実際に実行はしません。
+
+** -k, --keep-files
+<code>*.abc</code>などの中間形式ファイルを削除せずに残します。
+
+** --scm=<cmd>
+scmをabcに変換するコマンドを指定します。デフォルトは、<code>habc-scm</code>です。
+
+** --abcx=<cmd>
+abcをXMLに変換するコマンドを指定します。デフォルトは、<code>habc-xml</code>です。
+
+** --swfx=<cmd>          Use <cmd> to compile abcx to swfx
+XML形式をabcを、XML形式のswfに埋め込むコマンドを指定します。デフォルトは、<code>m4</code>です。
+
+**  --template=<tempalte>
+XML形式のswfのテンプレートを指定します。デフォルトは、<code>$PREFIX/lib/habc/template.xml</code>です。
+
+**  --swf=<cmd>
+XML形式のswfをバイナリ形式のswfに変換するコマンドを指定します。デフォルトは、<code>swfmill</code>です。
+
+** --abc-stage
+abcに変換した段階で処理を止めます。
+** --abcx-stage
+XML形式のabcに変換した段階で処理を止めます。
+** --swfx-stage
+XML形式のswfに変換した段階で処理を止めます。
