@@ -1,1 +1,18 @@
-* HappyABC マニュアル
+* HappyABCマニュアル
+** 概要
+HappyABCは、FlashPlayer9以降で動作するFlashを生成するSchemeコンパイラです。 AS3と比較して、<em>高速なコンパイル</em>と<em>簡潔な記述</em>を達成することが目標です。
+
+開発はid:mzpによって行なわれています。
+
+** マニュアル
++ [[programming-with-happyabc]]
++ [[syntax]]
++ [[modules]
++ [[objects]]
++ [[command-line-option]]
+
+** 関連ページ
+- [[http://happyabc.org:title=happyabc.org]] - ソースコードなどの配布ページ
+- [[http://github.com/mzp/scheme-abc/:title=scheme-abc - GitHub] - GitHub上のレポジトリ
+- [[http://happyabc.g.hatena.ne.jp/:title=開発Blog]
+
