@@ -2,7 +2,7 @@
 ** 概要
 HappyABCは、FlashPlayer9以降で動作するFlashを生成するSchemeコンパイラです。 AS3と比較して、<em>高速なコンパイル</em>と<em>簡潔な記述</em>を達成することが目標です。
 
-開発は[[http://d.hatena.ne.jp/mzp:title=mzp]]によって行なわれています。
+開発は[http://d.hatena.ne.jp/mzp:title=mzp]によって行なわれています。
 
 ** マニュアル
 + [[programming-with-happyabc]]
