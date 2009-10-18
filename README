@@ -12,7 +12,7 @@ HappyABCは、FlashPlayer9以降で動作するFlashを生成するSchemeコン�
 + [[command-line-option]]
 
 ** 関連ページ
-- [[http://happyabc.org:title=happyabc.org]] - ソースコードなどの配布ページ
-- [[http://github.com/mzp/scheme-abc/:title=scheme-abc - GitHub]] - GitHub上のレポジトリ
-- [[http://happyabc.g.hatena.ne.jp/:title=開発Blog]]
+- [http://happyabc.org:title=happyabc.org] - ソースコードなどの配布ページ
+- [http://github.com/mzp/scheme-abc/:title=scheme-abc - GitHub] - GitHub上のレポジトリ
+- [http://happyabc.g.hatena.ne.jp/:title=開発Blog]
 
