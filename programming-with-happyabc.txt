@@ -1,6 +1,6 @@
 * HappyABCによるプログラミング
 ** 処理の概要
-<img src="overview.png" />
+[overview.png:image]
 
 ** エントリポイント
 swfファイルがロードされると、main関数が呼ばれます。引数は、ステージであるSpriteクラスのインスタンスです。
