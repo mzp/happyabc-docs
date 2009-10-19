@@ -1,8 +1,9 @@
-* 概要
+* オブジェクトシステム
+** 概要
 クラスの宣言と使用方法です。
 Flashのライブラリを利用するために用いることを想定しています。
 
-* (class name (super) (attr1 attr2 ..) method1 method2 ..)[文]
+** (class name (super) (attr1 attr2 ..) method1 method2 ..)[文]
 <code>name</code>というクラスを宣言します。
 <code>super</code>は親クラスです。複数の親クラスを指定したり、親クラスを省略するとObjectを指定したのと同じ意味になります。
 <code>attr_n</code>でクラスの持つ属性を指定します。属性は、slot-ref/slot-set!で参照・設定できます。
@@ -16,16 +17,16 @@ Flashのライブラリを利用するために用いることを想定してい
      (+ (* x x) (* y y))))
 ||<
 
-* (new name)[式]
+** (new name)[式]
 <code>name</code>クラスのインスタンスを生成します。
 
-* (slot-ref obj name)[式]
+** (slot-ref obj name)[式]
 <code>obj</code>の指すオブジェクトの<code>name</code>属性を参照します。
 
-* (slo-set! obj name val)[式]
+** (slo-set! obj name val)[式]
 <code>obj</code>の指すオブジェクトの<code>name</code>属性に、<code>val</code>を評価した結果を設定します。
 
-* (. obj (f arg1 arg2 ..))[式]
+** (. obj (f arg1 arg2 ..))[式]
 <code>obj</code>の指すオブジェクトのメソッド<code>f</code>を呼びます。
 
 >|scheme|
