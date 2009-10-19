@@ -2,7 +2,7 @@
 ** 処理の概要
 HappyABCはscmをswfに変換する際に、複数の中間形式を介します。
 処理の流れは次のようになります。
-[overview.png:image]
+[http://wikihub.org/wiki/happyabc/overview.png:image]
 
 :.scm:元となるソースコード。
 :.ho:Happyabc Object file。ソースコードを(狭義の)コンパイルをした結果。
